@@ -317,7 +317,7 @@ This project is open-sourced software licensed under the [MIT license](LICENSE).
 
 **🎓 Laravel 12 Ujikom 2025 - SMKN 1 Ciamis 🎓**
 
-*Dibuat dengan ❤️ oleh Muhammad Fikri Haikal*
+*Dibuat dengan 🔥 oleh Muhammad Fikri Haikal*
 
 **Ready for modern full-stack development!** 🚀
 
