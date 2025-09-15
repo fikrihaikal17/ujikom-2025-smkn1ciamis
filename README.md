@@ -1,0 +1,1 @@
+# ujikom-2025-smkn1ciamis
