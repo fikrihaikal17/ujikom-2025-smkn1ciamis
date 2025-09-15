@@ -284,7 +284,6 @@ Project ini dibuat sebagai bagian dari **Ujian Kompetensi Keahlian (Ujikom) 2025
 
 **SMK Negeri 1 Ciamis**
 
-<div align="center">
 
 - 📍 **Alamat**: Jl. Jenderal Sudirman No.269, Ciamis, Jawa Barat
 - 🌐 **Website**: [smkn1ciamis.sch.id](https://smkn1ciamis.sch.id)
