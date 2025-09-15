@@ -1,5 +1,40 @@
-# Laravel 12 Ujikom 2025- **Periode Ujikom**: 2025
-- **Project Type**: Web Application Development dengan Laravel Framework
+# Laravel 12 Ujikom 2025 - SMKN 1 Ciamis
+
+![Laravel](https://img.shields.io/badge/Laravel-12.x-red.svg)
+![Vue.js](https://img.shields.io/badge/Vue.js-3.x-green.svg)
+![PHP](https://img.shields.io/badge/PHP-8.4+-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+
+> **Project Ujian Kompetensi Keahlian 2025**  
+> Web Application Development dengan Laravel Framework + Vue.js
+
+---
+
+## 👤 Data Siswa
+
+<div align="center">
+
+| **Biodata** | **Keterangan** |
+|-------------|----------------|
+| **Nama Lengkap** | Muhammad Fikri Haikal |
+| **NIS** | 232410560 |
+| **NISN** | 0084673783 |
+| **Tempat, Tanggal Lahir** | Nusa Tenggara Timur, 17 Maret 2008 |
+| **Kelas** | XII PPLG |
+| **Sekolah** | SMKN 1 Ciamis |
+| **Tahun Ujikom** | 2025 |
+
+</div>
+
+## 🏫 Informasi Ujikom
+
+- **📚 Mata Pelajaran**: Junior Developer
+- **🎯 Kompetensi Keahlian**: Pengembangan Perangkat Lunak dan Gim (PPLG)
+- **📅 Periode Ujikom**: 2025
+- **💻 Project Type**: Full-Stack Web Application Development
+- **🌐 Framework**: Laravel 12 + Vue.js 3
+
+---
 
 ## 🚀 Tech Stack & Features
 
@@ -29,6 +64,8 @@
 - 🚀 **Performance Optimized** - Vite bundling & lazy loading
 - 📝 **Full Documentation** - Comprehensive setup guide
 
+---
+
 ## 📋 Requirements
 
 ### 🔧 Development Environment (Laragon Recommended!)
@@ -49,54 +86,9 @@
 ### 🌐 Browser Support
 - Chrome 88+ | Firefox 85+ | Safari 14+ | Edge 88+
 
+---
+
 ## 🔧 Installation Guide
-
-### 🚀 Option 1: Laragon Quick Setup (Recommended)s
-
-![Laravel](https://img.shields.io/badge/Laravel-12.x-red.svg)
-![PHP](https://img.shields.io/badge/PHP-8.4+-blue.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
-
-Project Laravel 12 untuk Ujikom 2025 di SMKN 1 Ciamis dengan custom minimal implementation.
-
-## � Data Siswa
-
-| **Biodata**               | **Keterangan**                     |
-| ------------------------- | ---------------------------------- |
-| **Nama Lengkap**          | Muhammad Fikri Haikal              |
-| **NIS**                   | 232410560                          |
-| **NISN**                  | 0084673783                         |
-| **Tempat, Tanggal Lahir** | Nusa Tenggara Timur, 17 Maret 2008 |
-| **Kelas**                 | XII PPLG                           |
-| **Sekolah**               | SMKN 1 Ciamis                      |
-| **Tahun Ujikom**          | 2025                               |
-
-## 🏫 Informasi Ujikom
-
-- **Mata Pelajaran**: Junior Developer
-- **Kompetensi Keahlian**: Pengembangan Perangkat Lunak dan Gim
-- **Periode Ujikom**: 2025
-- **Project Type**: Web Application Development dengan Laravel Framework
-
-## �🚀 Features
-
-- Laravel 12 Framework (Custom Minimal Implementation)
-- MySQL Database Integration
-- Tailwind CSS & Vite for Frontend
-- PHPUnit Testing Framework
-- Custom Autoloader (bypass Composer issues)
-- Complete Laravel stubs for VS Code IntelliSense
-- Responsive Design
-- Modern UI/UX Implementation
-
-## 📋 Requirements
-
-- PHP 8.4+
-- MySQL Database
-- Laragon (recommended) or XAMPP
-- VS Code with Intelephense extension
-
-## 🔧 Installation
 
 ### 🚀 Quick Setup dengan Laragon (Recommended)
 
@@ -184,95 +176,137 @@ npm run dev
 - VS Code
 
 #### Setup Steps
+1. Copy project ke `htdocs` folder
+2. Start XAMPP (Apache + MySQL)
+3. Follow steps 3-7 dari Laragon setup
 
-### Step 3: Database Setup
-
-1. Create database `ujikom_2025` in MySQL
-2. Run migrations:
-
-```bash
-php artisan migrate
-```
-
-### Step 4: Start Development Server
-
-```bash
-php artisan serve
-```
-
-Visit: `http://127.0.0.1:8000`
+---
 
 ## 📁 Project Structure
 
 ```
 ujikom-2025/
 ├── app/                    # Application logic
-├── config/                 # Configuration files
+│   ├── Http/Controllers/   # Controllers
+│   ├── Models/            # Eloquent models
+│   └── Providers/         # Service providers
+├── config/                # Configuration files
 ├── database/              # Migrations, factories, seeders
 ├── public/                # Web accessible files
-├── resources/             # Views, CSS, JS
+├── resources/             # Views, CSS, JS, Vue components
+│   ├── js/components/     # Vue.js components
+│   ├── views/            # Blade templates
+│   └── css/              # Stylesheets
 ├── routes/                # Route definitions
 ├── vendor/                # Custom Laravel stubs
 └── tests/                 # Test files
 ```
 
-## 🛠️ Development
+---
 
-### Custom Implementation
+## 🛠️ Development Workflow
 
-This project uses a custom minimal Laravel implementation to bypass Composer dependency issues while maintaining full Laravel functionality.
-
-### VS Code Integration
-
-Complete stub classes provided for full IntelliSense support without traditional Composer autoloading.
-
-### Testing
-
+### 🎯 Frontend Development dengan Vue.js
 ```bash
-php artisan test
+# Start development dengan hot reload
+npm run dev
+
+# Build untuk production
+npm run build
+
+# Preview production build
+npm run serve
 ```
+
+### 🔧 Backend Development dengan Laravel
+```bash
+# Start Laravel development server
+php artisan serve
+
+# Run tests
+php artisan test
+
+# Database migrations
+php artisan migrate
+
+# Create new migration
+php artisan make:migration create_example_table
+```
+
+### 🧪 Testing
+```bash
+# Run all tests
+php artisan test
+
+# Run specific test file
+php artisan test tests/Feature/ExampleTest.php
+
+# Run with coverage
+php artisan test --coverage
+```
+
+---
 
 ## 🎯 Tujuan Project
 
 Project ini dibuat sebagai bagian dari **Ujian Kompetensi Keahlian (Ujikom) 2025** untuk mendemonstrasikan kemampuan dalam:
 
-- ✅ **Web Development** dengan Laravel Framework
-- ✅ **Database Management** dengan MySQL
-- ✅ **Frontend Development** dengan Tailwind CSS
-- ✅ **Testing** dengan PHPUnit
+- ✅ **Full-Stack Web Development** dengan Laravel + Vue.js
+- ✅ **Database Design & Management** dengan MySQL
+- ✅ **Modern Frontend Development** dengan Vue.js & Tailwind CSS
+- ✅ **API Development** untuk SPA integration
+- ✅ **Testing** dengan PHPUnit framework
 - ✅ **Version Control** dengan Git & GitHub
 - ✅ **Problem Solving** dalam custom implementation
+- ✅ **Project Documentation** yang profesional
 
-## 👨‍💻 Author & Contact
+---
+
+## 👨‍💻 Contact & Social Media
 
 **Muhammad Fikri Haikal**
 
-| **Kontak**      | **Detail**                                         |
-| --------------- | -------------------------------------------------- |
-| 📧 **Email**    | fikrihaikal170308@gmail.com                        |
-| 🐙 **GitHub**   | [@fikrihaikal17](https://github.com/fikrihaikal17) |
-| 🏫 **Sekolah**  | SMKN 1 Ciamis                                      |
-| 📚 **Jurusan**  | Pengembangan Perangkat Lunak dan Gim           (PPLG)            |
-| 🎓 **Angkatan** | 2022-2025                                          |
+<div align="center">
+
+| **Platform** | **Link/Info** |
+|--------------|---------------|
+| 📧 **Email** | [fikrihaikal170308@gmail.com](mailto:fikrihaikal170308@gmail.com) |
+| 🐙 **GitHub** | [@fikrihaikal17](https://github.com/fikrihaikal17) |
+| 🏫 **Sekolah** | SMKN 1 Ciamis |
+| 📚 **Jurusan** | Pengembangan Perangkat Lunak dan Gim (PPLG) |
+| 🎓 **Angkatan** | 2022-2025 |
+
+</div>
+
+---
 
 ## 🏫 Informasi Sekolah
 
 **SMK Negeri 1 Ciamis**
 
+<div align="center">
+
 - 📍 **Alamat**: Jl. Jenderal Sudirman No.269, Ciamis, Jawa Barat
 - 🌐 **Website**: [smkn1ciamis.sch.id](https://smkn1ciamis.sch.id)
-- ⭐ **Kompetensi Keahlian**: Teknik Komputer dan Jaringan (TKJ)
+- ⭐ **Kompetensi Keahlian**: Pengembangan Perangkat Lunak dan Gim (PPLG)
 - 📅 **Periode Ujikom**: Tahun Pelajaran 2024/2025
+
+</div>
+
+---
 
 ## 🏆 Achievement Targets
 
 Melalui project ini, diharapkan dapat menunjukkan pencapaian kompetensi:
 
 - [x] **Merancang dan membangun aplikasi web** dengan framework modern
-- [x] **Mengimplementasikan database** dengan relasi yang tepat
+- [x] **Mengimplementasikan SPA** dengan Vue.js + Laravel API
 - [x] **Menerapkan responsive design** untuk berbagai device
 - [x] **Menggunakan version control** untuk manajemen kode
 - [x] **Dokumentasi project** yang lengkap dan profesional
+- [x] **Performance optimization** dengan modern build tools
+
+---
 
 ## 📜 License
 
@@ -284,8 +318,12 @@ This project is open-sourced software licensed under the [MIT license](LICENSE).
 
 **🎓 Laravel 12 Ujikom 2025 - SMKN 1 Ciamis 🎓**
 
-_Dibuat dengan 🔥 oleh Muhammad Fikri Haikal_
+*Dibuat dengan ❤️ oleh Muhammad Fikri Haikal*
 
-**Ready for development!** 🚀
+**Ready for modern full-stack development!** 🚀
+
+---
+
+⭐ **Star this repo if you find it helpful!** ⭐
 
 </div>
