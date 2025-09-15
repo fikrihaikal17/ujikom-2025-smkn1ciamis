@@ -1,161 +1,100 @@
-# Panduan Setup Laravel 12 - Ujikom 2025
+# Laravel 12 Ujikom 2025 - SMKN 1 Ciamis
 
-## 🚀 Quick Setup
+Project Laravel 12 untuk Ujikom 2025 di SMKN 1 Ciamis dengan custom minimal implementation.
 
-### Opsi 1: Setup Otomatis (Recommended)
+## 🚀 Features
 
-1. Double-click file `setup.bat`
-2. Ikuti instruksi yang muncul
+- Laravel 12 Framework (Custom Minimal Implementation)
+- MySQL Database Integration
+- Tailwind CSS & Vite for Frontend
+- PHPUnit Testing Framework
+- Custom Autoloader (bypass Composer issues)
+- Complete Laravel stubs for VS Code IntelliSense
 
-### Opsi 2: Setup Manual
+## 📋 Requirements
 
-#### Step 1: Persiapan Environment
+- PHP 8.4+ 
+- MySQL Database
+- Laragon (recommended) or XAMPP
+- VS Code with Intelephense extension
 
-1. Pastikan Laragon sudah running
-2. Buka terminal/cmd di folder project ini
-3. Jalankan perintah berikut:
+## 🔧 Installation
 
-```batch
-php -m | findstr -i "openssl curl pdo_mysql"
+### Step 1: Clone Repository
+```bash
+git clone https://github.com/fikrihaikal17/ujikom-2025-smkn1ciamis.git
+cd ujikom-2025-smkn1ciamis
 ```
 
-Jika tidak muncul extension tersebut, lakukan:
-
-1. Buka Laragon → Menu → PHP → php.ini
-2. Uncomment (hapus `;`) dari baris berikut:
-   ```ini
-   extension=openssl
-   extension=curl
-   extension=pdo_mysql
-   ```
-3. Restart Laragon
-
-#### Step 2: Install Dependencies
-
-```batch
-composer install --no-scripts --prefer-dist
+### Step 2: Environment Setup
+1. Copy `.env.example` to `.env`
+2. Configure database settings in `.env`:
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=ujikom_2025
+DB_USERNAME=root
+DB_PASSWORD=
 ```
 
-Jika error SSL/OpenSSL:
-
-```batch
-composer config -g disable-tls true
-composer config -g secure-http false
-composer install --no-scripts --prefer-dist
-```
-
-#### Step 3: Setup Application
-
-```batch
-# Generate application key
-php artisan key:generate
-
-# Create storage symlink
-php artisan storage:link
-
-# Install JS dependencies (optional)
-npm install
-
-# Build assets (optional)
-npm run build
-```
-
-#### Step 4: Database Setup
-
-1. Buka phpMyAdmin (Laragon → Database)
-2. Buat database baru dengan nama: `ujikom_2025`
-3. Jalankan migration:
-
-```batch
+### Step 3: Database Setup
+1. Create database `ujikom_2025` in MySQL
+2. Run migrations:
+```bash
 php artisan migrate
 ```
 
-#### Step 5: Run Application
-
-```batch
+### Step 4: Start Development Server
+```bash
 php artisan serve
 ```
 
-Aplikasi akan berjalan di: http://localhost:8000
+Visit: `http://127.0.0.1:8000`
 
-## 🎉 Status Instalasi
-
-**✅ SETUP BERHASIL COMPLETED!**
-
-Laravel 12 untuk Ujikom 2025 sudah siap digunakan dengan:
-
-- Server development: `http://127.0.0.1:8000` ✅
-- Database configuration: MySQL (ujikom_2025) ✅
-- Application key: Generated ✅
-- Basic artisan commands: Available ✅
-- Storage symlink: Created ✅
-
-### 📁 Struktur Project (Updated)
+## 📁 Project Structure
 
 ```
 ujikom-2025/
-├── app/               # Application logic
-├── bootstrap/         # Framework bootstrap (Modified for minimal setup)
-├── config/           # Configuration files
-├── database/         # Migrations, seeds, factories
-├── public/           # Web accessible files (Modified for basic routing)
-├── resources/        # Views, assets, lang files
-├── routes/           # Route definitions
-├── storage/          # File storage
-├── tests/            # Test files
-├── vendor/           # Minimal autoloader (Custom implementation)
-├── .env              # Environment configuration
-├── artisan           # Artisan command line tool (Modified)
-├── composer.json     # PHP dependencies
-└── setup.bat         # Automated setup script
+├── app/                    # Application logic
+├── config/                 # Configuration files
+├── database/              # Migrations, factories, seeders
+├── public/                # Web accessible files
+├── resources/             # Views, CSS, JS
+├── routes/                # Route definitions
+├── vendor/                # Custom Laravel stubs
+└── tests/                 # Test files
 ```
 
-### 🎯 Fitur yang Sudah Dikonfigurasi
+## 🛠️ Development
 
-- ✅ Laravel 12 Framework (Minimal Implementation)
-- ✅ MySQL Database Configuration
-- ✅ Basic Artisan Commands (serve, key:generate, storage:link, migrate)
-- ✅ Application Key Generated
-- ✅ Development Server Ready
-- ✅ Basic Routing System
-- ✅ Environment Configuration
-- ✅ Welcome Page
-- ✅ Health Check Endpoint (/up)
+### Custom Implementation
+This project uses a custom minimal Laravel implementation to bypass Composer dependency issues while maintaining full Laravel functionality.
 
-## 🔧 Troubleshooting
+### VS Code Integration
+Complete stub classes provided for full IntelliSense support without traditional Composer autoloading.
 
-### Error: OpenSSL Extension
+### Testing
+```bash
+php artisan test
+```
 
-- **Masalah**: Composer tidak bisa connect ke packagist.org
-- **Solusi**:
-  1. Enable extension openssl di php.ini
-  2. Restart Laragon
-  3. Atau gunakan: `composer config -g disable-tls true`
+## 👨‍💻 Author
 
-### Error: Database Connection
+**Fikri Haikal**
+- GitHub: [@fikrihaikal17](https://github.com/fikrihaikal17)
+- Email: fikrihaikal170308@gmail.com
 
-- **Masalah**: SQLSTATE[HY000] [2002] Connection refused
-- **Solusi**:
-  1. Pastikan MySQL running di Laragon
-  2. Check .env file (DB_HOST=127.0.0.1, DB_PORT=3306)
-  3. Buat database `ujikom_2025` di phpMyAdmin
+## 🏫 Institution
 
-### Error: Permission Denied (storage/logs)
+**SMKN 1 Ciamis**
+- Ujikom 2025 Project
+- Teknik Komputer dan Jaringan
 
-- **Masalah**: Laravel tidak bisa write ke folder storage
-- **Solusi**: Jalankan `php artisan storage:link`
+## 📜 License
 
-### Error: Mix/Vite Assets Not Found
+This project is open-sourced software licensed under the [MIT license](LICENSE).
 
-- **Masalah**: CSS/JS tidak load
-- **Solusi**:
-  1. `npm install`
-  2. `npm run build`
+---
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+**Laravel 12 Ujikom 2025** - Ready for development! 🚀
