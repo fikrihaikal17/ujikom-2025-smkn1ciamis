@@ -4,12 +4,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 
 Route::get('/', function () {
-    return view('welcome-vue');
+  return view('welcome-vue');
 });
 
 // Original welcome route untuk fallback
 Route::get('/original', function () {
-    return view('welcome');
+  return view('welcome');
 });
 
 Route::get('/dashboard', function () {
